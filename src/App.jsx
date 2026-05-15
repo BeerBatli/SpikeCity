@@ -93,12 +93,14 @@ export default function SpikeCityLandingPage() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,#ff00aa55,transparent_35%)]" />
 
               <div className="relative z-10 max-w-2xl px-5 md:px-12 pt-8">
+
                 <p className="uppercase tracking-[0.3em] text-pink-500 text-sm mb-5">
                   Featured
                 </p>
 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
-                  VALORANT UPDATE 8.11 PATCH NOTES & CHANGES
+                  VALORANT UPDATE 8.11<br />
+                   PATCH NOTES & CHANGES
                 </h2>
 
                 <p className="mt-6 text-xl text-zinc-300 leading-relaxed max-w-xl">
