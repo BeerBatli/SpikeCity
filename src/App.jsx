@@ -85,7 +85,7 @@ export default function SpikeCityLandingPage() {
             {/* Hero */}
             <section className="relative overflow-hidden rounded-3xl border border-fuchsia-500/20 bg-[#090012] min-h-[520px] md:h-[430px]">
               <img
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600"
+                src="https://i.ibb.co/gZDjKnFn/Chat-GPT-Image-May-15-2026-04-29-14-AM.png"
                 alt="Cyberpunk"
                 className="absolute inset-0 w-full h-full object-cover opacity-45"
               />
