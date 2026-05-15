@@ -69,9 +69,10 @@ export default function SpikeCityLandingPage() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-5">
-            <button className="text-zinc-300 hover:text-white text-xl">⌕</button>
-            <button className="bg-gradient-to-r from-[#ee1978] to-[#ee1978] hover:opacity-90 transition px-7 py-3 rounded-xl font-semibold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)]">
+          <div className="flex items-center gap-3 md:gap-5">
+            <button className="lg:hidden text-3xl text-zinc-300 hover:text-white">☰</button>
+            <button className="text-zinc-300 hover:text-white text-xl hidden lg:block">⌕</button>
+            <button className="bg-gradient-to-r from-[#ee1978] to-[#ee1978] hover:opacity-90 transition px-4 md:px-7 py-3 rounded-xl font-semibold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)]">
               JOIN CITY
             </button>
           </div>
@@ -82,23 +83,22 @@ export default function SpikeCityLandingPage() {
           {/* Hero + News */}
           <div className="space-y-5">
             {/* Hero */}
-            <section className="relative overflow-hidden rounded-3xl border border-fuchsia-500/20 bg-[#090012] h-[430px]">
+            <section className="relative overflow-hidden rounded-3xl border border-fuchsia-500/20 bg-[#090012] min-h-[520px] md:h-[430px]">
               <img
-                src="https://i.ibb.co/gZDjKnFn/Chat-GPT-Image-May-15-2026-04-29-14-AM.png"
+                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600"
                 alt="Cyberpunk"
-                className="absolute inset-0 w-full h-full object-cover opacity-60"
+                className="absolute inset-0 w-full h-full object-cover opacity-45"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07000f] via-[#13001d]/90 to-transparent" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,#ff00aa55,transparent_35%)]" />
 
-              <div className="relative z-10 max-w-2xl px-12 pt-8">
+              <div className="relative z-10 max-w-2xl px-5 md:px-12 pt-8">
                 <p className="uppercase tracking-[0.3em] text-pink-500 text-sm mb-5">
                   Featured
                 </p>
 
-                <h2 className="text-5xl lg:text-4xl font-black leading-[1.05] tracking-tight text-white">
-                  VALORANT UPDATE 8.11 <br />
-                  PATCH NOTES & CHANGES
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
+                  VALORANT UPDATE 8.11 PATCH NOTES & CHANGES
                 </h2>
 
                 <p className="mt-6 text-xl text-zinc-300 leading-relaxed max-w-xl">
@@ -130,9 +130,9 @@ export default function SpikeCityLandingPage() {
                 {newsItems.map((item) => (
                   <article
                     key={item.title}
-                    className="group flex gap-5 border-b border-white/5 pb-5 last:border-none"
+                    className="group flex flex-col md:flex-row gap-5 border-b border-white/5 pb-5 last:border-none"
                   >
-                    <div className="w-[320px] h-[120px] overflow-hidden rounded-2xl shrink-0 border border-fuchsia-500/10">
+                    <div className="w-full md:w-[320px] h-[220px] md:h-[120px] overflow-hidden rounded-2xl shrink-0 border border-fuchsia-500/10">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -208,8 +208,7 @@ export default function SpikeCityLandingPage() {
 
             {/* Join */}
             <section className="rounded-3xl border border-fuchsia-500/20 bg-[#07000e]/90 p-6">
-              <h3 className="text-pink-500 uppercase tracking-[0.18em] text-xl font-bold hover:scale-[1.02] transition-transform">
-          
+              <h3 className="text-pink-500 uppercase tracking-[0.18em] text-xl font-bold">
                 Join The City
               </h3>
 
@@ -217,7 +216,7 @@ export default function SpikeCityLandingPage() {
                 Be part of India’s fastest growing gaming community.
               </p>
 
-              <button className="w-full mt-6 bg-gradient-to-r from-[#ee1978] to-[#ee1978] py-4 rounded-2xl text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)] hover:scale-[1.02] transition-transform">
+              <button className="w-full mt-6 bg-gradient-to-r from-[#ee1978] to-[#ee1978] py-4 rounded-2xl text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)]">
                 ⍟ JOIN CITY
               </button>
 
@@ -243,7 +242,7 @@ export default function SpikeCityLandingPage() {
                 className="w-full mt-6 bg-black/50 border border-fuchsia-500/20 rounded-xl px-4 py-4 outline-none focus:border-pink-500 text-white placeholder:text-zinc-600"
               />
 
-              <button className="w-full mt-5 bg-gradient-to-r from-[#ee1978] to-[#ee1978] py-4 rounded-2xl text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)] hover:scale-[1.02] transition-transform">
+              <button className="w-full mt-5 bg-gradient-to-r from-[#ee1978] to-[#ee1978] py-4 rounded-2xl text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)]">
                 JOIN
               </button>
             </section>
