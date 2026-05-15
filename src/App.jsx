@@ -98,7 +98,7 @@ export default function SpikeCityLandingPage() {
                   Featured
                 </p>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
+                <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
                   VALORANT UPDATE 8.11<br />
                    PATCH NOTES & CHANGES
                 </h2>
