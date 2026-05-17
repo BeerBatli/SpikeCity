@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@keyframes upcoming-games-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.upcoming-games-scroll {
+  animation: upcoming-games-scroll 45s linear infinite;
+}
+
+.upcoming-games-scroll:hover {
+  animation-play-state: paused;
+}
+
+.upcoming-games-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+}
