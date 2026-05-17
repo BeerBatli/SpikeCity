@@ -142,6 +142,15 @@ const footerIcons = [
   },
 ]
 
+const navItems = [
+  { label: 'Home', path: '/' },
+  { label: 'News', path: '/news' },
+  { label: 'Esports', path: '/esports' },
+  { label: 'Build', path: '/build' },
+  { label: 'Features', path: '/features' },
+  { label: 'Video', path: '/video' },
+]
+
 const sidebarNews = [
   {
     category: 'ESPORTS',
@@ -264,18 +273,18 @@ export default function PostPage() {
           </div>
 
           <nav className="hidden lg:flex items-center gap-10 text-sm font-medium uppercase tracking-wide">
-            {['Home', 'News', 'Esports', 'Agents', 'Guides', 'Features', 'Videos'].map((item, index) => (
-              <button
-                key={item}
-                type="button"
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
                 className={`transition-all hover:text-pink-400 ${
-                  index === 0
+                  item.path === '/news'
                     ? 'text-pink-500 border-b-2 border-pink-500 pb-2'
                     : 'text-zinc-200'
                 }`}
               >
-                {item}
-              </button>
+                {item.label}
+              </Link>
             ))}
           </nav>
 
@@ -294,6 +303,22 @@ export default function PostPage() {
             </button>
           </div>
         </header>
+
+        <nav className="lg:hidden mt-3 flex gap-3 overflow-x-auto pb-1 text-xs font-semibold uppercase tracking-wide">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`shrink-0 rounded-full border px-4 py-2 ${
+                item.path === '/news'
+                  ? 'border-pink-500 bg-pink-500/15 text-pink-400'
+                  : 'border-fuchsia-500/20 text-zinc-300'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
         {/* Breadcrumbs */}
         <nav className="mt-4 sm:mt-5 text-xs sm:text-sm text-zinc-500" aria-label="Breadcrumb">
