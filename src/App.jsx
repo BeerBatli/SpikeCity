@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import HomePage from './pages/HomePage'
-import PostPage from './pages/PostPage'
+import PostRouter from './post/PostRouter'
+import { VALORANT_POST_SLUG } from './post/postsMeta'
 import News from './pages/News/News'
 import Esports from './pages/Esports/Esports'
 import Build from './pages/Build/Build'
@@ -16,7 +17,8 @@ export default function App() {
 
         <Route path="/" element={<HomePage />} />
 
-        <Route path="/post" element={<PostPage />} />
+        <Route path="/post/:slug" element={<PostRouter />} />
+        <Route path="/post" element={<Navigate to={`/post/${VALORANT_POST_SLUG}`} replace />} />
         <Route path="/news" element={<News />} />
         <Route path="/esports" element={<Esports />} />
         <Route path="/build" element={<Build />} />
