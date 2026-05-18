@@ -4,6 +4,7 @@ import SiteHeader from '../components/SiteHeader'
 import UpcomingGames from '../components/UpcomingGames'
 const HERO_IMAGE =
   'https://res.cloudinary.com/dmnwaytt8/image/upload/v1779105679/Computer_setup_dasqao.webp'
+  alt: 'Gaming Setup under 10000 lakh'
 
 const TOTAL_PRICE = '₹1,03,594'
 
@@ -251,6 +252,24 @@ function CityIcon({ className = 'w-5 h-5' }) {
   )
 }
 
+function AmazonSponsoredLink({ href }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      className="inline-flex items-center gap-2 rounded-xl bg-[#ee1978] px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+      aria-label="View on Amazon (sponsored)"
+    >
+      <span>View on Amazon</span>
+      <span className="rounded-md bg-white/25 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+        Sponsored
+      </span>
+      <ArrowRightIcon className="w-3.5 h-3.5" />
+    </a>
+  )
+}
+
 function SectionHeading({ children }) {
   return (
     <div className="flex items-center gap-4 mb-6">
@@ -304,21 +323,13 @@ function ComponentCard({ part, index }) {
             <a
               href={part.priceTracker}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-pink-500/40 px-4 py-2.5 text-sm font-semibold text-pink-400 hover:bg-pink-500/10 transition-colors"
             >
               Check on PCPriceTracker
               <ArrowRightIcon className="w-3.5 h-3.5" />
             </a>
-            <a
-              href={part.amazon}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#ee1978] px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-            >
-              View on Amazon
-              <ArrowRightIcon className="w-3.5 h-3.5" />
-            </a>
+            <AmazonSponsoredLink href={part.amazon} />
           </div>
         </div>
       </div>
@@ -529,6 +540,12 @@ export default function GamingPcBuildPost() {
                 We skipped a premium AIO, RGB extras, and Wi-Fi add-ons to keep the total near{' '}
                 {TOTAL_PRICE}. You still get a modern DDR5 + PCIe 4.0 platform that will not feel
                 outdated within a year.
+              </p>
+
+              <p className="rounded-xl border border-zinc-500/30 bg-zinc-500/5 px-4 py-3 text-sm text-zinc-400 leading-relaxed">
+                <strong className="text-zinc-300">Disclosure:</strong> Amazon links in this guide are
+                sponsored. As an Amazon Associate, SpikeCity earns from qualifying purchases at no
+                extra cost to you.
               </p>
 
               <SectionHeading>Component breakdown</SectionHeading>
