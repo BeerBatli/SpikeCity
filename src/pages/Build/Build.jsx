@@ -1,12 +1,13 @@
 import CategoryPage from '../CategoryPage'
+import { BUILD_PC_SLUG } from '../../post/postsMeta'
 
 const items = [
   {
-    slug: 'best-gaming-pc-setup-under-80000-updated',
+    slug: BUILD_PC_SLUG,
     category: 'Setups',
-    title: 'Best Gaming PC Setup Under ₹80,000 [UPDATED]',
+    title: 'Best Gaming PC Setup Under ₹1 Lakh [UPDATED]',
     description: 'Smart budget choices for maximum performance.',
-    image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=900',
+    image: 'https://res.cloudinary.com/dmnwaytt8/image/upload/v1779105679/Computer_setup_dasqao.webp',
   },
   {
     slug: 'controller-setups-for-ranked',
