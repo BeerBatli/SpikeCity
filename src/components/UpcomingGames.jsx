@@ -6,7 +6,7 @@ const upcomingGames = [
   {
     name: 'GTA VI',
     platform: 'PS5 / Xbox / PC',
-    releaseAt: '2026-05-26T00:00:00+05:30',
+    releaseAt: '2026-11-19T00:00:00+05:30',
     image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=200',
   },
   {

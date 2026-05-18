@@ -1,25 +1,9 @@
 import { Link } from 'react-router-dom'
+import SiteHeader from '../components/SiteHeader'
 import UpcomingGames from '../components/UpcomingGames'
 
 const HERO_IMAGE =
   'https://i.ibb.co/gZDjKnFn/Chat-GPT-Image-May-15-2026-04-29-14-AM.png'
-
-function MenuIcon({ className = 'w-6 h-6' }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-      <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function SearchIcon({ className = 'w-5 h-5' }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-      <circle cx="11" cy="11" r="7" />
-      <path d="M16.5 16.5 21 21" strokeLinecap="round" />
-    </svg>
-  )
-}
 
 function CalendarIcon({ className = 'w-4 h-4' }) {
   return (
@@ -142,17 +126,9 @@ const footerIcons = [
   },
 ]
 
-const navItems = [
-  { label: 'Home', path: '/' },
-  { label: 'News', path: '/news' },
-  { label: 'Esports', path: '/esports' },
-  { label: 'Build', path: '/build' },
-  { label: 'Features', path: '/features' },
-  { label: 'Video', path: '/video' },
-]
-
 const sidebarNews = [
   {
+    slug: 'vct-masters-shanghai-draw-revealed',
     category: 'ESPORTS',
     time: '2h ago',
     title: 'VCT Masters Shanghai Draw Revealed',
@@ -160,6 +136,7 @@ const sidebarNews = [
     image: 'https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=400',
   },
   {
+    slug: 'iso-agent-abilities-gameplay-breakdown',
     category: 'AGENT NEWS',
     time: '4h ago',
     title: 'ISO Agent Abilities & Gameplay Breakdown',
@@ -167,6 +144,7 @@ const sidebarNews = [
     image: 'https://images.unsplash.com/photo-1542751371-29b4c2a7f211?q=80&w=400',
   },
   {
+    slug: 'ascent-map-guide-callouts-tips-tricks',
     category: 'GUIDES',
     time: '1d ago',
     title: 'Ascent Map Guide: Callouts, Tips & Tricks',
@@ -260,65 +238,7 @@ export default function PostPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ff00a84d,transparent_35%),radial-gradient(circle_at_bottom,#8b00ff33,transparent_30%)] pointer-events-none" />
 
       <div className="relative z-10 px-3 sm:px-6 py-3 sm:py-5 max-w-[1600px] mx-auto">
-        {/* Header */}
-        <header className="border border-fuchsia-500/20 rounded-2xl px-4 sm:px-8 py-4 sm:py-5 bg-[#06010d]/90 backdrop-blur-xl flex items-center justify-between gap-3 shadow-[0_0_40px_rgba(255,0,170,0.08)]">
-          <div className="min-w-0">
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              <span className="text-pink-500">Spike</span>
-              <span className="text-cyan-400">City</span>
-            </h1>
-            <p className="hidden sm:block text-[11px] tracking-[0.35em] text-zinc-400 mt-1 uppercase">
-              Gaming News & Esports
-            </p>
-          </div>
-
-          <nav className="hidden lg:flex items-center gap-10 text-sm font-medium uppercase tracking-wide">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`transition-all hover:text-pink-400 ${
-                  item.path === '/news'
-                    ? 'text-pink-500 border-b-2 border-pink-500 pb-2'
-                    : 'text-zinc-200'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2 md:gap-5 shrink-0">
-            <button type="button" className="lg:hidden text-zinc-300 hover:text-white" aria-label="Open navigation">
-              <MenuIcon className="w-8 h-8" />
-            </button>
-            <button type="button" className="hidden lg:flex text-zinc-300 hover:text-white" aria-label="Search">
-              <SearchIcon />
-            </button>
-            <button
-              type="button"
-              className="bg-gradient-to-r from-[#ee1978] to-[#ee1978] hover:opacity-90 transition px-3 md:px-7 py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold tracking-wide shadow-[0_0_25px_rgba(255,0,170,0.35)]"
-            >
-              JOIN CITY
-            </button>
-          </div>
-        </header>
-
-        <nav className="lg:hidden mt-3 flex gap-3 overflow-x-auto pb-1 text-xs font-semibold uppercase tracking-wide">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`shrink-0 rounded-full border px-4 py-2 ${
-                item.path === '/news'
-                  ? 'border-pink-500 bg-pink-500/15 text-pink-400'
-                  : 'border-fuchsia-500/20 text-zinc-300'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <SiteHeader activePath="/news" />
 
         {/* Breadcrumbs */}
         <nav className="mt-4 sm:mt-5 text-xs sm:text-sm text-zinc-500" aria-label="Breadcrumb">
@@ -478,7 +398,7 @@ export default function PostPage() {
               <div className="rounded-2xl border border-fuchsia-500/20 bg-[#05000b]/90 p-5">
                 <p className="text-xs uppercase tracking-widest text-zinc-500 mb-2">Previous Post</p>
                 <Link
-                  to="/post"
+                  to="/post/iso-agent-abilities-gameplay-breakdown"
                   className="text-pink-500 font-semibold hover:text-pink-400 transition-colors flex items-center gap-2 text-sm sm:text-base"
                 >
                   <ArrowLeftIcon />
@@ -488,7 +408,7 @@ export default function PostPage() {
               <div className="rounded-2xl border border-fuchsia-500/20 bg-[#05000b]/90 p-5 sm:text-right">
                 <p className="text-xs uppercase tracking-widest text-zinc-500 mb-2">Next Post</p>
                 <Link
-                  to="/post"
+                  to="/post/ascent-map-guide-callouts-tips-tricks"
                   className="text-pink-500 font-semibold hover:text-pink-400 transition-colors flex items-center gap-2 sm:justify-end text-sm sm:text-base"
                 >
                   <span>Ascent Map Guide: Callouts, Tips & Tricks</span>
@@ -514,7 +434,11 @@ export default function PostPage() {
               </div>
               <div className="space-y-5">
                 {sidebarNews.map((item) => (
-                  <article key={item.title} className="flex gap-4 group">
+                  <Link
+                    key={item.title}
+                    to={`/post/${item.slug}`}
+                    className="flex gap-4 group rounded-xl -m-1 p-1 hover:bg-white/5 transition-colors"
+                  >
                     <div className="w-20 h-20 shrink-0 overflow-hidden rounded-xl border border-fuchsia-500/10">
                       <img
                         src={item.image}
@@ -535,7 +459,7 @@ export default function PostPage() {
                         {item.views}
                       </p>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
             </section>
