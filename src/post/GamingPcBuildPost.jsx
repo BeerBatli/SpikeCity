@@ -4,6 +4,7 @@ import SiteHeader from '../components/SiteHeader'
 import UpcomingGames from '../components/UpcomingGames'
 const HERO_IMAGE =
   'https://res.cloudinary.com/dmnwaytt8/image/upload/v1779105679/Computer_setup_dasqao.webp'
+  alt: 'Gaming Setup under 10000 lakh'
 
 const TOTAL_PRICE = '₹1,03,594'
 
