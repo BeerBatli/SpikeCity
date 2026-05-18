@@ -1,4 +1,7 @@
-/** Slugs for `/post/:slug` — full article UI lives in `PostPage.jsx` for valorant; others use `SimplePost.jsx`. */
+/** Slugs for `/post/:slug` — full article UI in dedicated components; others use `SimplePost.jsx`. */
+export const VALORANT_POST_SLUG = 'valorant-update-8-11-patch-notes'
+export const BUILD_PC_SLUG = 'best-gaming-pc-setup-under-1-lakh-updated'
+
 export const ARTICLES = {
   'vct-masters-shanghai-draw-revealed': {
     category: 'Esports',
@@ -53,11 +56,12 @@ export const ARTICLES = {
     description: 'Set plays, mid control, and retake patterns from the current meta.',
     image: 'https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=900',
   },
-  'best-gaming-pc-setup-under-80000-updated': {
+  [BUILD_PC_SLUG]: {
     category: 'Setups',
-    title: 'Best Gaming PC Setup Under ₹80,000 [UPDATED]',
-    description: 'Smart budget choices for maximum performance.',
-    image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=900',
+    title: 'Best Gaming PC Setup Under ₹1 Lakh [UPDATED]',
+    description:
+      'Full ₹1.03 lakh gaming PC parts list for India: Ryzen 5 7500F, RX 9060 XT 16GB, DDR5, NVMe, prices, buy links, and FAQ.',
+    image: 'https://res.cloudinary.com/dmnwaytt8/image/upload/v1779102076/9060XT_wscwbi.webp',
   },
   'controller-setups-for-ranked': {
     category: 'Agents',
@@ -108,5 +112,3 @@ export const ARTICLES = {
     image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=900',
   },
 }
-
-export const VALORANT_POST_SLUG = 'valorant-update-8-11-patch-notes'
